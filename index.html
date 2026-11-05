@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111A1F">
+<title>الصدم والقذف — رحلة تفاعلية في كمية الحركة</title>
+<meta name="description" content="تطبيق تفاعلي لدرس الصدم والقذف: كمية الحركة، التصادمات المرنة والليّنة، وحركة القذائف، بمحاكاة وخطوط بيانية وأسئلة.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23111A1F'/%3E%3Cpath d='M6 30 C14 30 19 10 35 10' fill='none' stroke='%23C34328' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app night" id="app">
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#cover" aria-label="إلى الغلاف">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M4 30 C13 30 18 10 36 10" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M29.5 6.4 L36 10 L29.5 13.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/>
+        <circle cx="4" cy="30" r="3" fill="currentColor"/>
+      </svg>
+      <span class="brand-text">الصدم والقذف</span>
+    </a>
+    <div class="chapter-mark" id="chapterMark" aria-live="polite"></div>
+    <div class="top-actions">
+      <button class="tbtn" id="btnOverview" aria-haspopup="dialog">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4h5v5H3zM12 4h5v5h-5zM3 11h5v5H3zM12 11h5v5h-5z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span>الفهرس</span>
+      </button>
+      <button class="tbtn icon-only" id="btnFull" aria-label="ملء الشاشة" title="ملء الشاشة">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4M13 3h4v4M7 17H3v-4M13 17h4v-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="deck" id="deck" tabindex="-1"></main>
+
+  <footer class="navbar">
+    <button class="nbtn nbtn-prev" id="prev" aria-label="الشريحة السابقة">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <span>السابق</span>
+    </button>
+    <div class="nav-mid">
+      <span class="nav-title" id="navTitle"></span>
+      <span class="progress" aria-hidden="true"><span class="progress-fill" id="progressFill"></span></span>
+    </div>
+    <button class="nbtn nbtn-next" id="next" aria-label="الشريحة التالية">
+      <span>التالي</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+  </footer>
+
+  <div class="swipe-hint" id="swipeHint" aria-hidden="true"></div>
+</div>
+
+<dialog class="overview" id="overview" aria-labelledby="overviewTitle">
+  <div class="overview-head">
+    <h2 id="overviewTitle">الفهرس</h2>
+    <button class="tbtn" id="btnCloseOverview" aria-label="إغلاق الفهرس">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+      <span>إغلاق</span>
+    </button>
+  </div>
+  <div class="overview-body" id="overviewBody"></div>
+</dialog>
+
+<div class="tip" id="tip" role="dialog" aria-modal="false" aria-hidden="true">
+  <div class="tip-head"><span class="tip-kicker" id="tipKicker"></span><button class="tip-close" id="tipClose" aria-label="إغلاق الشرح">×</button></div>
+  <div class="tip-body" id="tipBody"></div>
+</div>
+
+<div class="sr-only" id="live" aria-live="polite"></div>
+
+<script src="js/core.js"></script>
+<script src="js/widgets.js"></script>
+<script src="js/ch1.js"></script>
+<script src="js/ch2.js"></script>
+<script src="js/ch3.js"></script>
+<script src="js/ch4.js"></script>
+<script src="js/ch5.js"></script>
+<script src="js/ch6.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
